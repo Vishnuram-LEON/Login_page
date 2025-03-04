@@ -1,0 +1,214 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(./images/website-background-2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(5px) brightness(1);
+}
+.logo {
+    font-size: 48px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}
+
+.orange {
+    color: rgb(255, 165, 0);
+    font-size: x-large;
+}
+
+.black {
+    color: whitesmoke;
+}
+nav{
+    text-indent: 10px;
+    padding: 10px;
+}
+.anime{
+    width: 100%;
+    background-color: black;
+    color: whitesmoke;
+    overflow: hidden;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.anime-text{
+    animation: moving 10s linear infinite;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: medium;
+}
+/* Animation */
+@keyframes moving {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+/* Second Section */
+h4{
+    color: white;
+    font-size: x-large;
+    text-transform: capitalize;
+}
+h5{
+    font-size: larger;
+}
+.container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+.container .left{
+    line-height: 2rem;
+    width: 40%;
+}
+.container-icon {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: orange;
+    font-weight: bolder;
+    margin: 0;
+}
+.Box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    box-shadow: whitesmoke 0px 0px 15px 0px;
+    padding: 0px;
+    margin: 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.Box-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 20px;
+    padding: 0;
+    gap: 5px;
+}
+.Box-icon i{
+    color: rgb(255, 165, 0);
+    font-size: 40px;
+}
+/* Right Card */
+.right{
+    display: flex;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+.right .Rgcard{
+    height: 45vh;
+    width: 300px;
+    align-items: center;
+    padding: 20px;
+    justify-content: center;
+    box-shadow: 0px 0px 15px 0px;
+    background-color: white;
+}
+.input{
+    display: grid;
+    grid-column: auto;
+    gap: 50px;
+}
+input{
+    border-right: none;
+    border-top: none;
+    border-left: none;
+    outline: none;
+}
+button{
+    height: 30px;
+    background-color: rgb(255, 165, 0);
+    border: none;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 768px){
+    body{
+        backdrop-filter: blur(5px) brightness(1);
+        height: fit-content;
+    }
+    nav{
+        width: 100%;
+    }
+    .anime{
+        width: 100%;
+    }
+    .container{
+        width: 100%;
+        margin-left: 0px;
+        padding-left: 0px;
+        flex-direction: column;
+    }
+    .left{
+        align-items: start;
+        width: 100%;
+        flex-direction: column;
+    }
+    .left h4{
+        width: 150px;
+        text-align: start;
+        flex-direction: column;
+    }
+    .Box{
+        width: 10%;
+        text-align: start;
+        align-items: start;
+        margin: 0;
+    }
+    .Box-icon{
+        width: 10%;
+        align-items: center;
+        flex-direction: column;
+        padding-left: 0px;
+        margin-left: 0px;
+    }
+    .Box h4{
+        align-items: start;
+        text-align: center;
+    }
+    .right{
+        align-items: center;
+        width: 100%;
+        flex-direction: column;
+        margin: 0;
+    }
+    .container-icon{
+        flex-direction: column;
+    }
+    .Rgcard{
+        align-items: center;
+        margin-left: 0px;
+        padding-left: 0px;
+    }
+    .input{
+        width: 100%;
+        height: 100%;
+    }
+    .input button{
+        height: 35px;
+    }
+}
